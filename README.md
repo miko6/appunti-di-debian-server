@@ -170,3 +170,9 @@ services:
 7. ***btop***  
 
 `sudo apt install btop`  
+
+---
+
+8. ***fastfetch***
+
+`sudo apt install fastfetch`  
