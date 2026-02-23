@@ -164,3 +164,9 @@ services:
 6. ***Sensori temperatura***  
 
 `sudo apt install lm-sensors` richiamo delle temp con `sensors`  
+
+---
+
+7. ***btop***  
+
+`sudo apt install btop`  
