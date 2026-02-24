@@ -161,18 +161,48 @@ services:
 ```  
 ---
 
-6. ***Sensori temperatura***  
+6. ***Webmin***
+
+[1] Install required packages  
+
+`sudo apt -y install python3 shared-mime-info unzip apt-show-versions libapt-pkg-perl libauthen-pam-perl libio-pty-perl libnet-ssleay-perl`
+
+[2] Install Webmin  
+
+`sudo wget https://www.webmin.com/download/deb/webmin-current.deb`  
+`sudo dpkg -i webmin-current.deb`  
+`sudo nano /etc/webmin/miniserv.conf`  
+
+[3]  # add to last line : add access permission
+
+```
+allow=192.168.1.0/24  
+```
+
+[4] Per evitare conflitti con pihole andiamo a modificare il file /etc/hosts nel seguente modo:  
+
+`sudo nano /etc/hosts`  
+
+aggiungiamo al file le seguenti linee  
+
+```
+192.168.1.xxx   pi.hole  
+192.168.1.xxx   webmin.local  
+```
+---
+
+7. ***Sensori temperatura***  
 
 `sudo apt install lm-sensors` richiamo delle temp con `sensors`  
 
 ---
 
-7. ***btop***  
+8. ***btop***  
 
 `sudo apt install btop`  
 
 ---
 
-8. ***fastfetch***
+9. ***fastfetch***
 
 `sudo apt install fastfetch`  
