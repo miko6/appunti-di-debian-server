@@ -202,7 +202,7 @@ services:
 allow=192.168.1.0/24  
 ```
 
-[4] Per evitare conflitti con pihole andiamo a modificare il file /etc/hosts nel seguente modo:  
+[4] Per evitare conflitti con PiHole andiamo a modificare il file /etc/hosts **(nel sistema client, nel mio caso Linux Mint LMDE)** nel seguente modo:  
 
 `sudo nano /etc/hosts`  
 
@@ -211,6 +211,7 @@ aggiungiamo al file le seguenti linee
 ```
 192.168.1.xxx   pi.hole  
 192.168.1.xxx   webmin.local  
+192.168.1.xxx   portainer.local  
 ```
 ---
 
