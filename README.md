@@ -36,13 +36,37 @@
 
 ---
 
-3. ***Montaggio automatico disco secondario***
+3. **Disabilitare IPV6***  
 
-- identificare il disco ed il suo UUID con il comando  
+`sudo nano /etc/sysctl.conf`  
+
+- aggiungere queste righe al file:  
+
+```
+net.ipv6.conf.all.disable_ipv6 = 1  
+net.ipv6.conf.default.disable_ipv6 = 1  
+net.ipv6.conf.lo.disable_ipv6 = 1  
+net.ipv6.conf.tun0.disable_ipv6 = 1  
+```  
+- riavviare  
+
+`sudo reboot now`  
+
+- Se disabilitiamo l'*IPV6* possiamo fare questa modifica nella configurazione del firewall *ufw*:  
+
+`sudo nano /etc/default/ufw`  
+
+e settiamo il valore *IPV6* su *false*  
+
+---
+
+4. ***Montaggio automatico disco secondario***
+
+- identificare il disco ed il suo *UUID* con il comando  
 
 `sudo blkid`  
 
-- creaiamo il punto di mount  
+- creiamo il punto di mount  
 
 `sudo mkdir -p /mnt/xxxx`  
 
@@ -66,7 +90,7 @@
 
 ---
 
-4. ***Installazione di Samba e condivisione del secondo disco***  
+5. ***Installazione di Samba e condivisione del secondo disco***  
 
 `sudo apt update`  
 
@@ -104,7 +128,7 @@ guest ok = no
 
 ---
 
-5. ***Installare Docker engine + Portainer + stacks***  
+6. ***Installare Docker engine + Portainer + stacks***  
 
 [Guida per installare l'engine](https://docs.docker.com/engine/install/debian/)  
 
@@ -114,8 +138,7 @@ guest ok = no
 `sudo docker volume create portainer_data`  
 `sudo docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`  
 
-- Accedi alla Web UI:
-
+- Accedi alla Web UI:  
 Apri il browser e vai su https://<IP_del_tuo_server>:9443  
 
 - Installa gli stack preferiti (es. PiHole), loggati sulla pagina di Portainer, vai in Home, Environments, local, Staks, Add stacks, inserisci un nome per lo stack, nell'area di editing assicurati che sia selezionato l'editor "Web editor", incolla il compose, clicca sul pulsante "Deploy the stack"
@@ -161,7 +184,7 @@ services:
 ```  
 ---
 
-6. ***Webmin***
+7. ***Webmin***
 
 [1] Install required packages  
 
@@ -191,18 +214,18 @@ aggiungiamo al file le seguenti linee
 ```
 ---
 
-7. ***Sensori temperatura***  
+8. ***Sensori temperatura***  
 
 `sudo apt install lm-sensors` richiamo delle temp con `sensors`  
 
 ---
 
-8. ***btop***  
+9. ***btop***  
 
 `sudo apt install btop`  
 
 ---
 
-9. ***fastfetch***
+10. ***fastfetch***
 
 `sudo apt install fastfetch`  
