@@ -149,7 +149,7 @@ Apri il browser e vai su https://<IP_del_tuo_server>:9443
 
     FTLCONF_webserver_api_password: 'latuapassword': Sostituisci la_tua_password_sicura con una password complessa a tua scelta. Questa ti servirà per accedere all'interfaccia di amministrazione di Pi-hole  
 
-- PiHole  
+- PiHole compose script  
 
 ```version: "3"
 
