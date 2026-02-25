@@ -10,7 +10,7 @@
 
 1. ***Installare e abilitare il firewall ufw***  
 
-`sudo apt install enable`  
+`sudo apt install ufw`  
 `sudo ufw enable`  
 `sudo ufw status`  
 
