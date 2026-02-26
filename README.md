@@ -59,7 +59,7 @@ iface enp01  inet static
 
 ---
 
-4. **Disabilitare IPV6***  
+4. ***Disabilitare IPV6***  
 
 `sudo nano /etc/sysctl.conf`  
 
