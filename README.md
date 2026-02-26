@@ -2,7 +2,7 @@
 
 0. ***Azioni preliminari***
 
-`ip addr` per trovare l'ip del server  
+- `ip addr` per trovare l'ip del server  
 - loggarsi come *su* e poi `apt install sudo`  
 - aggiungere l'utente nomeutente al file sudoers `sudo usermod -aG sudo nomeutente`  
 
@@ -36,7 +36,28 @@
 
 ---
 
-3. **Disabilitare IPV6***  
+3. ***Configurare IP statico***  
+
+`sudo nano /etc/network/interfaces`  
+
+- Rimuovere le linee dhcp e allow-hotplug. Modificare il file per ottenere questa configurazione:  
+
+```
+# The loopback network interface
+auto lo
+iface lo inet loopback
+ 
+# The primary network interface
+auto enp01
+iface enp01  inet static
+ address 192.168.1.xxx
+ netmask 255.255.255.0
+ gateway 192.168.1.1
+ dns-domain miko.home
+ dns-nameservers 192.168.1.1 1.1.1.1 8.8.8.8
+```
+
+4. **Disabilitare IPV6***  
 
 `sudo nano /etc/sysctl.conf`  
 
@@ -60,7 +81,7 @@ e settiamo il valore *IPV6* su *no*
 
 ---
 
-4. ***Montaggio automatico disco secondario***
+5. ***Montaggio automatico disco secondario***
 
 - identificare il disco ed il suo *UUID* con il comando  
 
@@ -90,7 +111,7 @@ e settiamo il valore *IPV6* su *no*
 
 ---
 
-5. ***Installazione di Samba e condivisione del secondo disco***  
+6. ***Installazione di Samba e condivisione del secondo disco***  
 
 `sudo apt update`  
 
@@ -128,7 +149,7 @@ guest ok = no
 
 ---
 
-6. ***Installare Docker engine + Portainer + stacks***  
+7. ***Installare Docker engine + Portainer + stacks***  
 
 [Guida per installare l'engine](https://docs.docker.com/engine/install/debian/)  
 
@@ -185,7 +206,7 @@ services:
 ```  
 ---
 
-7. ***Webmin***
+8. ***Webmin***
 
 [1] Install required packages  
 
@@ -203,7 +224,7 @@ services:
 allow=192.168.1.0/24  
 ```
 
-[4] Per evitare conflitti tra le *WebUi* dei servizi installati nel server andiamo a modificare il file /etc/hosts nel sistema client **(nel mio caso Linux Mint LMDE)** nel seguente modo:  
+[4] Per evitare conflitti tra le *WebUi* dei servizi installati nel server andiamo a modificare il file /etc/hosts nel sistema client **(nel mio caso Linux Mint LMDE)** nel seguente modo: 
 
 `sudo nano /etc/hosts`  
 
@@ -216,18 +237,18 @@ aggiungiamo al file le seguenti linee
 ```
 ---
 
-8. ***Sensori temperatura***  
+9. ***Sensori temperatura***  
 
 `sudo apt install lm-sensors` richiamo delle temp con `sensors`  
 
 ---
 
-9. ***btop***  
+10. ***btop***  
 
 `sudo apt install btop`  
 
 ---
 
-10. ***fastfetch***
+11. ***fastfetch***
 
 `sudo apt install fastfetch`  
