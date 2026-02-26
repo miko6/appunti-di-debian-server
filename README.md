@@ -158,6 +158,7 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
+    dns: 127.0.0.1  # <--- AGGIUNGI QUESTA RIGA QUI
     ports:
       # DNS Ports (must be free on the host)
       - "53:53/tcp"
