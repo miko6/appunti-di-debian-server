@@ -57,6 +57,8 @@ iface enp01  inet static
  dns-nameservers 192.168.1.1 1.1.1.1 8.8.8.8
 ```
 
+---
+
 4. **Disabilitare IPV6***  
 
 `sudo nano /etc/sysctl.conf`  
