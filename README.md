@@ -56,7 +56,7 @@ net.ipv6.conf.tun0.disable_ipv6 = 1
 
 `sudo nano /etc/default/ufw`  
 
-e settiamo il valore *IPV6* su *false*  
+e settiamo il valore *IPV6* su *no*  
 
 ---
 
