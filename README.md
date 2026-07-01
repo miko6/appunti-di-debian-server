@@ -1,4 +1,4 @@
-## My DEBIAN SERVER installation ![alt](https://github.com/miko6/appunti-di-debian-server/blob/main/immagini/debians.jpg)
+## My DEBIAN SERVER installation ![alt](http://gitea.local/miko/Owner-avatar-appunti-di-debian-server/raw/branch/main/immagini/debians.jpg)
 
 0. ***Azioni preliminari***
 
