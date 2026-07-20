@@ -12,7 +12,9 @@
 
 - cerchiamo la riga *# Allow members of group sudo to execute any command*
 
-e aggiungiamo questa riga `nomeutente ALL=(ALL:ALL) ALL`
+e aggiungiamo questa riga `nomeutente ALL=(ALL:ALL) ALL`  
+
+(altra soluzione: Use `su -` to login as root with the root password you set, and then add your user to the sudoers group with `usermod -aG sudo <username>`. Log in again and sudo should work.)  
 
 ---  
 
