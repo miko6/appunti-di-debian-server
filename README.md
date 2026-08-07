@@ -474,7 +474,7 @@ aggiungiamo al file le seguenti linee
 
 ---
 
-15. **fail2ban**  
+16. **fail2ban**  
 
  `sudo apt install fail2ban`  
 
