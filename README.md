@@ -1,4 +1,4 @@
-## My DEBIAN SERVER installation ![alt](http://gitea.local/miko/Owner-avatar-appunti-di-debian-server/raw/branch/main/immagini/debians.jpg)
+## My DEBIAN SERVER installation ![alt](https://raw.githubusercontent.com/miko6/appunti-di-debian-server/b8a57808a46c674bfe709c9047d4cbb1992374a7/immagini/debians.jpg)
 
 0. ***Azioni preliminari***
 
@@ -464,7 +464,15 @@ aggiungiamo al file le seguenti linee
 14. ***sensori***
 
 `sudo apt install lm-sensors`
-`sudo sensors-detect` rispondere si a tutte le domande
+`sudo sensors-detect` rispondere si a tutte le domande  
+
+---
+
+15. ***ncdu*** (NCurses Disk Usage)  
+
+`sudo apt install ncdu` [COMANDI](https://gitlab.com/hatem-badawi/linuxhowto/-/blob/main/linux/ncdu/ncdu.pdf)
+
+---
 
 15. **fail2ban**  
 
