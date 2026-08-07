@@ -470,7 +470,7 @@ aggiungiamo al file le seguenti linee
 
 15. ***ncdu*** (NCurses Disk Usage)  
 
-`sudo apt install ncdu` [COMANDI](https://gitlab.com/hatem-badawi/linuxhowto/-/blob/main/linux/ncdu/ncdu.pdf)
+`sudo apt install ncdu` - [COMANDI](https://gitlab.com/hatem-badawi/linuxhowto/-/blob/main/linux/ncdu/ncdu.pdf)
 
 ---
 
