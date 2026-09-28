@@ -534,12 +534,12 @@ fonti utili:
 
 17. **fish shell**
 
-`sudo apt update`  
-`sudo apt install fish`  
-`chsh -s $(which fish` (per impostare fish come shell predefinita al posto di bash)  
-`mkdir -p ~/.config/fish/functions` (crea le cartelle per i file di configurazione)  
-- copiare nella cartella fish il file *config.fish* e nella sotto cartella */functions* il file *fish_prompt.fish* creati per debian  
-- loggarsi come root con `sudo -i` e lanciare il comando `chsh -s $(which fish` per cambiare la shell anche per l'utente root  
-`mkdir -p /root/.config/fish/functions`  
+- `sudo apt update`  
+- `sudo apt install fish`  
+- `chsh -s $(which fish` (per impostare fish come shell predefinita al posto di bash)  
+- `mkdir -p ~/.config/fish/functions` (crea le cartelle per i file di configurazione)  
+- copiare nella cartella fish il file *config.fish* e nella sottocartella */functions* il file *fish_prompt.fish* creati per debian  
+- loggarsi come root con `sudo -i` e lanciare il comando `chsh -s $(which fish)` per cambiare la shell anche per l'utente root  
+- `mkdir -p /root/.config/fish/functions`  
 - `exit` per tornare utente normale e lanciare il comando `cp ~/.config/fish/functions/fish_prompt.fish /root/.config/fish/functions/`  
-`set -U fish_greeting`  
+- `set -U fish_greeting`  
